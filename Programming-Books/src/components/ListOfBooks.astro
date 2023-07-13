@@ -1,0 +1,34 @@
+---
+import BookItem from "./BookItem.astro";
+const books = [
+    {
+        id:'clean-code',
+        title:'Clean Code: A Handbook of Agile Software Craftsmanship',
+        img:"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1436202607i/3735293.jpg"
+    },
+    {
+        id:'the-clean-coder',
+        title:'The Clean Coder: A Code of Conduct for Professional Programmers',
+        img:"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347470803i/10284614.jpg"
+    },
+    {
+        id:'the-pragmatic-programer',
+        title:'The Pragmatic Programmer: From Journeyman to Master',
+        img:"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1401432508i/4099.jpg"
+    }
+]
+---
+
+<ul class=" grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
+
+    {
+        books.map(({ id, title, img }) => {
+            return(
+            <li>
+                    <BookItem id={id} title={title} img={img}/>
+            </li>
+            )
+        })
+    }
+
+</ul>
