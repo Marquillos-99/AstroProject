@@ -63,6 +63,7 @@ const { title } = Astro.props;
 					//refresh view
 					document.getElementById('content').innerHTML = data
 					//scroll till sky
+					document.body.innerHTML = data
 					document.documentElement.scrollTop = 0
 				})
 			}
