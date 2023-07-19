@@ -14,6 +14,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="view-transition" content="same-origin"/>
 		<title>{title}</title>
 	</head>
 	<body>
@@ -34,3 +35,15 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
+
+<script>
+	window.navigation.addEventListener('navigate',(event) =>{
+		const toUrl = new URL(event.destination.url)
+
+		//extern page?
+		if(location.origin != toUrl.origin) return
+
+		//if its on the same page
+		
+	})
+</script>
