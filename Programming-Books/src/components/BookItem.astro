@@ -11,5 +11,9 @@
     } = Astro.props
 ---
 <a class=" hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-xl" href={`/${id}`}>
-    <img class=" aspect-[389/500] h-full object-cover w-full rounded" src={img} alt={`/${title}`}>
+    <img class=" aspect-[389/500] h-full object-cover w-full rounded" 
+    src={img} 
+    alt={`/${title}`}
+    style={`view-transition-name: book-${id}`}
+    >
 </a>
